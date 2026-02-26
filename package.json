@@ -26,6 +26,7 @@
   "browserslist": [
     "last 2 years",
     "> 0.5% in FR",
+    "not chrome 109",
     "not dead"
   ]
 }

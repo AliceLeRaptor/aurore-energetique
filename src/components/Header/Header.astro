@@ -1,0 +1,28 @@
+---
+import ThemeToggle from "../ThemeToggle/ThemeToggle";
+---
+
+<header class="Header">
+  <nav class="wrapper">
+    <ul>
+      <li>
+        <a href="/">Accueil</a>
+      </li>
+      <li>
+        <a href="/presentation">Qui suis-je</a>
+      </li>
+      <li>
+        <a href="/soins">Mes soins</a>
+      </li>
+      <li>
+        <a href="/avis">Avis</a>
+      </li>
+      <li>
+        <a href="/contact">Contact</a>
+      </li>
+      <li>
+        <ThemeToggle client:only />
+      </li>
+    </ul>
+  </nav>
+</header>

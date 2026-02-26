@@ -18,5 +18,9 @@ export default {
           `Expected class selector "${selector}" to be kebab-case or capitalized kebab`,
       },
     ],
+    "custom-property-empty-line-before": [
+      "never",
+      { ignore: ["after-custom-property"] },
+    ],
   },
 };

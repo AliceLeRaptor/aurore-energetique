@@ -1,7 +1,40 @@
 :root {
+  color-scheme: light dark;
+
   /* Fake values */
   --gap-1: 8px;
   --gap-2: 12px;
   --gap-3: 16px;
   --gap-4: 20px;
+
+  --color-primary: light-dark(lightpink, palevioletred);
+  --color-white: light-dark(white, black);
+  --color-black: light-dark(black, white);
+
+  color-scheme: light;
+
+  &.dark {
+    color-scheme: dark;
+  }
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1rem;
+  /* stylelint-disable declaration-property-value-no-unknown */
+  color: var(--color-black);
+  background-color: var(--color-white);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 700;
+  margin-block: 1em;
+}
+
+p {
+  margin-block: 1em;
 }
