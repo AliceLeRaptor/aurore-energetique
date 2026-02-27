@@ -1,7 +1,48 @@
 ---
+import { Image } from "astro:assets";
+import BolTibetain from "./../assets/bol_tibetain.jpeg";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <p>Je suis la page des soins, voici mes prestations</p>
+  <h1>Je suis la page des soins, voici mes prestations</h1>
+  <p>
+    [Message obligatoire sur les soins qui ne remplacent pas le diagnostique
+    d'un medecin]
+  </p>
+  <section>
+    <h2>Soin 1 - Lorem Ipsum</h2>
+    <p>
+      Description du soin. Praesent quis nisl et mi gravida suscipit non et
+      ipsum. Morbi convallis finibus ligula id lobortis. Suspendisse
+      pellentesque nulla quis nulla dignissim, et sollicitudin leo pretium.
+    </p>
+    <p>Tarif : 80€</p>
+    <Image alt="" src={BolTibetain} height="200" />
+  </section>
+  <section>
+    <h2>Soin 2 - Lorem Ipsum</h2>
+    <p>
+      Description du soin. Praesent quis nisl et mi gravida suscipit non et
+      ipsum. Morbi convallis finibus ligula id lobortis. Suspendisse
+      pellentesque nulla quis nulla dignissim, et sollicitudin leo pretium.
+    </p>
+    <p>Tarif : 75€</p>
+  </section>
+  <section>
+    <h2>Soin 3 - Lorem Ipsum</h2>
+    <p>
+      Description du soin. Praesent quis nisl et mi gravida suscipit non et
+      ipsum. Morbi convallis finibus ligula id lobortis. Suspendisse
+      pellentesque nulla quis nulla dignissim, et sollicitudin leo pretium.
+    </p>
+    <p>Tarif : 90€</p>
+  </section>
 </Layout>
+
+<style>
+  section:not(:last-of-type) {
+    border-bottom: 2px solid var(--color-primary);
+    padding-block-end: 1em;
+  }
+</style>
