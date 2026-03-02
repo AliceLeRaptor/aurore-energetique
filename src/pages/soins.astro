@@ -1,7 +1,8 @@
 ---
 import { Image } from "astro:assets";
-import BolTibetain from "./../assets/bol_tibetain.jpeg";
 import Layout from "../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+const cares = await getCollection("cares");
 ---
 
 <Layout>
@@ -10,34 +11,18 @@ import Layout from "../layouts/Layout.astro";
     [Message obligatoire sur les soins qui ne remplacent pas le diagnostique
     d'un medecin]
   </p>
-  <section>
-    <h2>Soin 1 - Lorem Ipsum</h2>
-    <p>
-      Description du soin. Praesent quis nisl et mi gravida suscipit non et
-      ipsum. Morbi convallis finibus ligula id lobortis. Suspendisse
-      pellentesque nulla quis nulla dignissim, et sollicitudin leo pretium.
-    </p>
-    <p>Tarif : 80€</p>
-    <Image alt="" src={BolTibetain} height="200" />
-  </section>
-  <section>
-    <h2>Soin 2 - Lorem Ipsum</h2>
-    <p>
-      Description du soin. Praesent quis nisl et mi gravida suscipit non et
-      ipsum. Morbi convallis finibus ligula id lobortis. Suspendisse
-      pellentesque nulla quis nulla dignissim, et sollicitudin leo pretium.
-    </p>
-    <p>Tarif : 75€</p>
-  </section>
-  <section>
-    <h2>Soin 3 - Lorem Ipsum</h2>
-    <p>
-      Description du soin. Praesent quis nisl et mi gravida suscipit non et
-      ipsum. Morbi convallis finibus ligula id lobortis. Suspendisse
-      pellentesque nulla quis nulla dignissim, et sollicitudin leo pretium.
-    </p>
-    <p>Tarif : 90€</p>
-  </section>
+  {
+    cares.map((care, id) => (
+      <section>
+        <h2>
+          Soin {id + 1} - {care.data.title}
+        </h2>
+        <p>{care.body}</p>
+        <p>Tarif : {care.data.price}&euro;</p>
+        <Image src={care.data.image} alt="" width="200" />
+      </section>
+    ))
+  }
 </Layout>
 
 <style>
