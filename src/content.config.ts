@@ -8,6 +8,7 @@ const cares = defineCollection({
     z.object({
       title: z.string(),
       image: image(),
+      imgAlt: z.string(),
       price: z.number(),
     }),
 });

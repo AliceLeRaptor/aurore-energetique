@@ -19,7 +19,7 @@ const cares = await getCollection("cares");
         </h2>
         <p>{care.body}</p>
         <p>Tarif : {care.data.price}&euro;</p>
-        <Image src={care.data.image} alt="" width="200" />
+        <Image src={care.data.image} alt={care.data.imgAlt} width="200" />
       </section>
     ))
   }

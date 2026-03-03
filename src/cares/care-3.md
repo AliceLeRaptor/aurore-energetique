@@ -1,6 +1,7 @@
 ---
 title: "Lorem Ipsum"
 image: "./bol_tibetain.jpeg"
+imgAlt: "Une femme est allongée, détendue, les yeux fermés. Une personne tient un bol tibétain doré au niveau de son front, elle va frapper dessus avec un baton"
 price: 90
 ---
 

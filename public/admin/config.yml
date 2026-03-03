@@ -1,7 +1,11 @@
 backend:
   name: github
   repo: AliceLeRaptor/aurore-energetique
+  squash_merges: true
 locale: "fr"
+editor:
+  preview: false
+publish_mode: editorial_workflow # Allow to save, edit, approve and publish drafts
 media_folder: "src/assets/images" # Location where files will be stored in the repo
 public_folder: "src/assets/images" # The src attribute for uploaded media
 collections:
@@ -14,5 +18,11 @@ collections:
     fields:
       - { label: "Titre", name: "title", widget: "string" }
       - { label: "Image", name: "image", widget: "image" }
+      - {
+          label: "Texte alternatif pour l'image",
+          name: "imgAlt",
+          hint: "Texte qui va s'afficher lorsque l'image ne charge pas ou pour les personnes qui utilisent des lecteurs d'écran. Le texte doit être descriptif de l'image et utiliser des mots simples dans la mesure du possible.",
+          widget: "text",
+        }
       - { label: "Prix", name: "price", widget: "number" }
       - { label: "Description", name: "body", widget: "markdown" }
