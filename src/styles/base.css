@@ -21,9 +21,14 @@
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 1rem;
-  /* stylelint-disable declaration-property-value-no-unknown */
   color: var(--color-black);
   background-color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
 }
 
 h1,

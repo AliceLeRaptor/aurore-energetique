@@ -1,6 +1,10 @@
 .Header {
   background-color: var(--color-primary);
 
+  a {
+    display: inline-block;
+  }
+
   ul {
     padding: 16px;
     margin: 0;
