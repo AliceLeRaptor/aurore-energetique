@@ -1,16 +1,117 @@
 :root {
-  color-scheme: light dark;
+  /* primary */
+  --color-primary-light: light-dark(
+    oklch(78.5% 0.054 262.797deg),
+    oklch(28.8% 0.071 262.797deg)
+  );
+  --color-primary: light-dark(
+    oklch(61.9% 0.102 262.797deg),
+    oklch(11.4% 0.12 262.797deg)
+  );
 
-  /* Fake values */
-  --gap-1: 8px;
-  --gap-2: 12px;
-  --gap-3: 16px;
-  --gap-4: 20px;
+  /* secondary */
+  --color-secondary-light: light-dark(
+    oklch(83.1% 0.044 171.942deg),
+    oklch(47.4% 0.025 171.942deg)
+  );
+  --color-secondary: light-dark(
+    oklch(71.2% 0.038 171.942deg),
+    oklch(35.3% 0.02 171.942deg)
+  );
 
-  --color-primary: light-dark(lightpink, palevioletred);
-  --color-white: light-dark(white, black);
-  --color-black: light-dark(black, white);
+  /* accent */
+  --color-accent-light: light-dark(
+    oklch(82.7% 0.061 349.444deg),
+    oklch(45.8% 0.101 349.444deg)
+  );
+  --color-accent: light-dark(
+    oklch(70.4% 0.12 349.444deg),
+    oklch(33.4% 0.06 349.444deg)
+  );
 
+  /* greyscale */
+  --color-white: 100% 0 258.354deg;
+  --color-greyscale-25: 95% 0.005 258.354deg;
+  --color-greyscale-50: 88.5% 0.011 258.354deg;
+  --color-greyscale-100: 82% 0.018 258.354deg;
+  --color-greyscale-200: 75.5% 0.025 258.354deg;
+  --color-greyscale-300: 68.9% 0.033 258.354deg;
+  --color-greyscale-400: 62.4% 0.04 258.354deg;
+  --color-greyscale-500: 55.9% 0.048 258.354deg;
+  --color-greyscale-600: 49.4% 0.043 258.354deg;
+  --color-greyscale-700: 42.9% 0.038 258.354deg;
+  --color-greyscale-800: 36.4% 0.032 258.354deg;
+  --color-greyscale-900: 29.9% 0.026 258.354deg;
+  --color-greyscale-950: 23.3% 0.02 258.354deg;
+  --color-greyscale-975: o6.8% 0.015 258.354deg;
+  --color-black: 0% 0 258.354deg;
+
+  /* base */
+  --color-base: light-dark(
+    oklch(var(--color-greyscale-25)),
+    oklch(var(--color-greyscale-950))
+  );
+
+  /* text */
+  --color-text-strong: light-dark(
+    oklch(var(--color-greyscale-975)),
+    oklch(var(--color-greyscale-25))
+  );
+  --color-text-regular: light-dark(
+    oklch(var(--color-greyscale-900)),
+    oklch(var(--color-greyscale-50))
+  );
+  --color-text-subtle: light-dark(
+    oklch(var(--color-greyscale-700)),
+    oklch(var(--color-greyscale-200))
+  );
+
+  /* font-size */
+  --font-size-xs: 0.694rem;
+  --font-size-s: 0.833rem;
+  --font-size-r: 1rem;
+  --font-size-l: 1.2rem;
+  --font-size-xl: 1.44rem;
+  --font-size-xxl: 1.728rem;
+
+  /* spacing */
+  --space-012: 2px;
+  --space-025: 4px;
+  --space-050: 8px;
+  --space-075: 12px;
+  --space-100: 16px;
+  --space-125: 20px;
+  --space-150: 24px;
+  --space-175: 28px;
+  --space-200: 32px;
+
+  /* radius */
+  --radius-small: 0.25rem;
+  --radius-medium: 0.5rem;
+  --radius-large: 1rem;
+  --radius-round: 50%;
+  --radius-pill: 9999px;
+
+  /* shadow */
+  --shadow-color: var(--color-greyscale-700);
+  --shadow-small:
+    0px 1px 1px oklch(var(--shadow-color) / 20%),
+    0px 1px 2px -0.5px oklch(var(--shadow-color) / 45%),
+    0px 1px 4px -3px oklch(var(--shadow-color) / 35%);
+  --shadow-medium:
+    0px 1px 1px -0.5px oklch(var(--shadow-color) / 10%),
+    0px 1px 2px -1px oklch(var(--shadow-color) / 25%),
+    0px 2px 3px -1.5px oklch(var(--shadow-color) / 30%),
+    0px 5px 6px -2px oklch(var(--shadow-color) / 40%);
+  --shadow-large:
+    0px 0.5px 0.5px oklch(var(--shadow-color) / 20%),
+    0px 2px 2px -0.5px oklch(var(--shadow-color) / 25%),
+    0px 5px 6px -1px oklch(var(--shadow-color) / 25%),
+    0px 8px 9px -1px oklch(var(--shadow-color) / 30%),
+    0px 12px 14px -2px oklch(var(--shadow-color) / 30%),
+    0px 16px 20px -3px oklch(var(--shadow-color) / 25%);
+
+  /* theme */
   color-scheme: light;
 
   &.dark {
@@ -19,10 +120,10 @@
 }
 
 body {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 1rem;
-  color: var(--color-black);
-  background-color: var(--color-white);
+  font-family: var(--font-lato-regular);
+  font-size: var(--font-size-r);
+  color: var(--color-text-regular);
+  background-color: var(--color-base);
   display: flex;
   flex-direction: column;
 }
@@ -35,7 +136,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: var(--font-garamond);
   font-weight: 700;
   margin-block: 1em;
 }

@@ -27,5 +27,5 @@ export default defineConfig([
     extends: ["markdown/recommended"],
   },
   eslintConfigPrettier,
-  globalIgnores([".astro/", "dist/", "package-lock.json"]),
+  globalIgnores([".astro/", "dist/**", "package-lock.json"]),
 ]);

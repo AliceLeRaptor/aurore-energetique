@@ -1,5 +1,5 @@
 // @ts-check
-import { defineConfig } from "astro/config";
+import { defineConfig, fontProviders } from "astro/config";
 
 import preact from "@astrojs/preact";
 
@@ -14,5 +14,31 @@ export default defineConfig({
     sitemap({
       filter: (page) => page !== "https://aurore-energetique.fr/admin/",
     }),
+  ],
+  fonts: [
+    {
+      provider: fontProviders.local(),
+      name: "EBGaramond",
+      cssVariable: "--font-garamond",
+      options: {
+        variants: [
+          {
+            src: ["./src/assets/fonts/EBGaramond_compressed.woff2"],
+          },
+        ],
+      },
+    },
+    {
+      provider: fontProviders.local(),
+      name: "Lato",
+      cssVariable: "--font-lato-regular",
+      options: {
+        variants: [
+          {
+            src: ["./src/assets/fonts/Lato-Regular.woff2"],
+          },
+        ],
+      },
+    },
   ],
 });

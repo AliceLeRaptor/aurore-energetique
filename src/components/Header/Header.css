@@ -1,8 +1,16 @@
 .Header {
-  background-color: var(--color-primary);
+  background-color: var(--color-primary-light);
+  box-shadow: var(--shadow-medium);
+  letter-spacing: 0.05rem;
 
   a {
     display: inline-block;
+    text-decoration: none;
+
+    &:hover {
+      text-underline-offset: var(--space-025);
+      text-decoration: underline var(--color-text-subtle) 2px;
+    }
   }
 
   ul {
@@ -10,13 +18,12 @@
     margin: 0;
     display: flex;
     list-style: none;
-    gap: var(--gap-2);
+    gap: var(--space-150);
     align-items: center;
+    justify-content: flex-end;
   }
 
-  &-themeToggle {
-    display: flex;
-    align-items: center;
-    gap: var(--gap-1);
+  #logo {
+    flex: 1 0 auto;
   }
 }
