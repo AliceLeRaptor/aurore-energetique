@@ -11,7 +11,7 @@
 
 ## Stack
 
-Jamstack avec Preact (React mais plus léger), Astro et Decap CMS.
+Jamstack avec Preact (React mais plus léger) si besoin, Astro et Decap CMS.
 
 Le déploiement automatisé pourrait se faire via Static.app.
 
