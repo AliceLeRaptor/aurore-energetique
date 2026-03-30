@@ -1,5 +1,2 @@
 User-agent: *
-Disallow: /admin/
-
-# TODO: changer l'url
-Sitemap: https://aurore-energetique.fr/sitemap-index.xml
+Disallow: /
